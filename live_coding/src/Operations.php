@@ -1,16 +1,10 @@
 <?php
 namespace App\Calculatrice;
-
-/**
- * Classe principale qui fait la conversion
- * - Implémente l'interface
- * - Utilise le trait
- */
 class Operations implements ConvertInterface
 {
     use ConvertTrait;
 
-    private int $number; // Propriété typée
+    private int $number; 
 
     public function __construct(int $number)
     {
@@ -31,14 +25,10 @@ class Operations implements ConvertInterface
     {
         return strtoupper(dechex($this->number));
     }
-
-    /**
-     * Exemple de logique binaire demandée (ET, OU, XOR, décalages)
-     */
     public function demoBinaryOps(): array
     {
         $x = $this->number;
-        $y = 15; // juste un exemple pour tester
+        $y = 15; 
 
         return [
             'AND'  => $x & $y,
