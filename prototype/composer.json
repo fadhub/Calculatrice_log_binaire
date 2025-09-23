@@ -7,6 +7,12 @@
             "App\\Calculatrice\\": "src/"
         }
     },
+    "scripts": {
+    "start": "php bin/convert_cli.php ",
+    "lint": "php -l src/utils.php src/convertInterface.php src/permissions.php",
+    "format": "phpcbf src/utils.php src/convertInterface.php src/permissions.php",
+    "test": "phpunit"
+},
     "authors": [
         {
             "name": "fadna",
