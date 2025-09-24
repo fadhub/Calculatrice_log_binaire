@@ -1,0 +1,22 @@
+{
+    "name": "app/cli",
+    "description": "Mini calculatrice CLI logique binaire",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\Cli\\": "src/"
+        }
+    },
+     "scripts": {
+    "start": "php bin/calc.php",
+    "lint": "php -l src/*.php",
+    "format": "php-cs-fixer fix src/"
+  },
+    "authors": [
+        {
+            "name": "fadna"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
