@@ -1,16 +1,16 @@
 {
     "name": "app/cli",
-    "description": "Mini calculatrice CLI logique binaire",
+    "description": "CLI calculatrice logique binaire",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "App\\Cli\\": "src/"
+            "App\\": "src/"
         }
     },
-     "scripts": {
-    "start": "php bin/calc.php",
-    "lint": "php -l src/*.php",
-    "format": "php-cs-fixer fix src/"
+    "scripts": {
+    "build": "php bin/calc.php 5 3",
+    "validate": "php -l src/*.php",
+    "save": "php bin/convert_cli.php 42"
   },
     "authors": [
         {
