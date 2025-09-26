@@ -1,9 +1,5 @@
 <?php
 namespace App;
-
-/**
- * Classe qui convertit un entier en décimal/binaire/hexadécimal
- */
 class Converter implements ConvertInterface
 {
     use ConvertTrait;

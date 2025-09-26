@@ -8,9 +8,34 @@
         }
     },
     "scripts": {
-    "build": "php bin/calc.php 5 3",
-    "validate": "php -l src/*.php",
-    "save": "php bin/convert_cli.php 42"
+    "start": "php bin/calc.php",
+    
+    "build": [
+      "@validate",
+      "echo 'Build terminé: tous les fichiers sont corrects' "
+    ],
+    
+    "validate": [
+      "php -l src/Calculator.php",
+      "php -l src/Converter.php",
+      "php -l src/ConvertTrait.php",
+      "php -l src/ConvertInterface.php",
+      "echo 'Validation syntaxe PHP OK'"
+    ],
+    
+    "save": "php bin/calc.php",
+    
+    "lint": [
+      "php-cs-fixer fix src --dry-run --diff",
+      "echo 'Lint terminé'"
+    ],
+    
+    "format": "php-cs-fixer fix src",
+    
+    "test": [
+      "php bin/calc.php",
+      "echo 'Test terminé'"
+    ]
   },
     "authors": [
         {

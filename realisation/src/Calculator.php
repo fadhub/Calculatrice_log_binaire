@@ -1,9 +1,7 @@
 <?php
 namespace App;
 
-/**
- * Classe qui gère les opérations logiques entre deux entiers
- */
+
 class Calculator
 {
     use ConvertTrait;
