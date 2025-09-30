@@ -1,0 +1,17 @@
+{
+    "name": "app/somme",
+    "description": "calcule somme 2 nombre",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\Somme\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "fadna"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
