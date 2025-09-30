@@ -6,11 +6,9 @@ use App\Calculator;
 try {
     $lines = [];
 
-    // Si des arguments sont passés, on les utilise
     if ($argc >= 3) {
         $lines[] = ($argv[1] . ' ' . $argv[2]);
     }
-    // Sinon, lire le fichier input.txt
     else {
         $lines = file(__DIR__ . '/../samples/input.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         if (!$lines) {
@@ -18,10 +16,9 @@ try {
         }
     }
 
-    $results = []; // Tableau pour stocker toutes les opérations
+    $results = []; 
 
     foreach ($lines as $line) {
-        // Chaque ligne doit contenir "A B"
         [$a, $b] = array_map(fn($v) => (int)($v ?? 0), explode(' ', $line) + [0,0]);
 
         $calc = new Calculator($a, $b);
@@ -57,7 +54,7 @@ try {
 
     // Sauvegarde dans output.json
     file_put_contents(__DIR__ . '/../samples/output.json', json_encode($results, JSON_PRETTY_PRINT));
-    echo "✅ Toutes les opérations ont été sauvegardées dans samples/output.json\n";
+    echo " Toutes les opérations ont été sauvegardées dans samples/output.json\n";
 
 } catch (Throwable $e) {
     fwrite(STDERR, "Erreur: " . $e->getMessage() . PHP_EOL);

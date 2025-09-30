@@ -14,8 +14,6 @@ class Calculator
         $this->a = $a;
         $this->b = $b;
     }
-
-    // Affiche A ET B
     public function and(): int
     {
         return $this->a & $this->b;
